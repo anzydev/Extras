@@ -564,25 +564,6 @@ It is important to note that the codebase has a good foundation. These are the t
 - ✅ **Auto-update uses electron-updater over HTTPS S3 with macOS code-signing** — update integrity is sound
 - ✅ **Sentry scrubs password fields** (`password="%filtered%"`)
 - ✅ **`will-navigate` partially guards navigation** (needs the origin-scope fix from BUG-16)
-
----
-
-## Attachments
-
-| File | What it is |
-|------|------------|
-| `SECURITY_REPORT.md` | Full static audit with ratings, threat model, all 19 findings |
-| `bugs.md` | Concise bug tracker (19 items, severity, file, fix) |
-| `ATTACKER_PERSPECTIVE_REPORT.md` | Red-team analysis — exact attack chains from a student's perspective |
-| `REMEDIATION_PATCHES.md` | Diff-style patches for every finding, build/sign runbook |
-| `security-tests/` | Zero-dependency PASS/FAIL test suite (Node ≥ 18, offline) |
-| `security-tests/MAPPING.md` | Test → Bug ID → source file/line table |
-| `athena-patch/` | Hardened, runnable Athena reference build with all fixes applied |
-| `heimdall-patch/` | Hardened, runnable Heimdall reference build with all fixes applied |
-| `verify-patch-channel.js` | End-to-end proof of the secure Athena⇄Heimdall channel (run with `node`) |
-| `Athena-Patch-1.0.0-arm64.dmg` | Built, ad-hoc signed, installable patched DMG |
-| `Heimdall-Patch-1.0.0-arm64.dmg` | Built, ad-hoc signed, installable patched DMG |
-
 ---
 
 *This report is based on static analysis of the shipped source maps. Dynamic testing (running the apps and exercising the socket, deep links, and IPC under controlled conditions) is recommended to confirm exploitability and measure attacker effort before release. All findings were identified on 2026-08-25 and reported to the Newton School engineering team via responsible disclosure.*
